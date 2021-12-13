@@ -39,7 +39,6 @@
   .slider__item-text {
     opacity: 0;
     transform: translateX(30px);
-    transition: 1s;
   }
 
   &:nth-child(even) {
@@ -289,7 +288,8 @@
     .slider__item-text {
       opacity: 1;
       transform: translateX(0);
-      transition: .5s;
+      transition: 0.3s linear;
+      transition-property: transform, opacity;
       transition-delay: .3s;
     }
   }
