@@ -60,6 +60,7 @@ export default () => {
             } else if (storySlider.activeIndex === 6) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
             }
+
           },
           resize: () => {
             storySlider.update();
