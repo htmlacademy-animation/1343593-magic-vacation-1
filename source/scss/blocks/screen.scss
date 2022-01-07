@@ -19,6 +19,19 @@
   }
 }
 
+.screen__bgr {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: $c-dark;
+}
+
+.screen__bgr--active {
+  height: 100%;
+  transition: height 0.5s linear;
+}
+
 .screen__wrapper {
   @include container;
   position: relative;
@@ -307,10 +320,18 @@
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
   }
+
+  & .screen__bgr {
+    z-index: 2;
+  }
 }
 
 .screen--prizes {
   background-color: $c-dark;
+
+  & .screen__bgr {
+    z-index: 1;
+  }
 }
 
 .screen--game {
